@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'utilizacion_buses_cargadores_app', # Se añade la aplicacion para que django la reconozca
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -73,10 +75,16 @@ WSGI_APPLICATION = 'utilizacion_buses_cargadores.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# --- --- CONEXION A LA BASE DE DATOS EN POSTGRESQL ---- --- -- ----
+# MOTOR DE BASE DE DATOS -> POSTGRESQL
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "gestion_utilizacion_buses_cargadores_tadb",
+        "USER": "thomasdba",
+        "PASSWORD": "UnaClav3",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
