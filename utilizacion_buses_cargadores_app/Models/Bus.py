@@ -1,13 +1,6 @@
 # Importamos el paquete models
 from django.db import models
 from utilizacion_buses_cargadores_app.Models import EstadoBus # Importamos la clase EstadoBus
-from django.core.exceptions import ValidationError
-from django.core.validators import RegexValidator
-import re
-
-def validar_placa(value):
-    if not re.match(r'^[A-Z]{3}\d{3}$', value):
-        raise ValidationError('La placa debe tener 3 letras seguidas de 3 números.')
 
 # Cada modelo (tabla) es una clase de la subclase models.Model
 class Bus(models.Model):
