@@ -5,6 +5,3 @@ from django.db import models
 class EstadoCargador(models.Model):
     id = models.AutoField("Identificador de cada estado que puede tener Cargador", primary_key=True, editable=False)
     descripcion = models.CharField("Tipos Estados que puede tener un Cargador", max_length=30, unique=True)
-    
-    def __str__(self) -> str:
-        return super().__str__()

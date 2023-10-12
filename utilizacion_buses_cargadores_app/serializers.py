@@ -1,6 +1,15 @@
 # Invocando el módulo de django rest framework
 from rest_framework import serializers
-from .models import EstadoBus #Importar un modelo ya definido
+#Importar un modelo ya definido
+from django.contrib import admin
+from utilizacion_buses_cargadores_app.Models.Bus import Bus
+from utilizacion_buses_cargadores_app.Models.EstadoBus import EstadoBus
+from utilizacion_buses_cargadores_app.Models.Cargador import Cargador
+from utilizacion_buses_cargadores_app.Models.EstadoCargador import EstadoCargador
+from utilizacion_buses_cargadores_app.Models.Hora import Hora
+from utilizacion_buses_cargadores_app.Models.HistorialUtilizacionBusHora import HistorialUtilizacionBusHora
+from utilizacion_buses_cargadores_app.Models.HistorialUtilizacionCargadorHora import HistorialUtilizacionCargadorHora
+from utilizacion_buses_cargadores_app.Models.UtilizacionCargadorBus import UtilizacionCargadorBus
 
 class EstadoBusSerializer(serializers.ModelSerializer):
     class Meta:
