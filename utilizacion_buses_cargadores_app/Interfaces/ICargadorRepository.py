@@ -8,7 +8,7 @@ class ICargadorRepository:
     def GetByidAsync(self, id: int) -> Cargador:
         pass
 
-    def GetByestado_idAsync(self, estado_id: str) -> Cargador:
+    def GetByestado_idAsync(self, estado_id: int) -> Cargador:
         pass
     def CreateAsync(self, unCargador: Cargador) -> bool:
         pass
