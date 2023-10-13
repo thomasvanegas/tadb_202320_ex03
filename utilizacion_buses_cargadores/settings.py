@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'utilizacion_buses_cargadores_app', # Se añade la aplicacion para que django la reconozca
-    'rest_framework'
+    'rest_framework',
+    'coreapi'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# SE CONFIGURA EL AUTO SCHEMA PARA VISUALIZAR EL URL DOCS CON COREAPI
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+}
