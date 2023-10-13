@@ -85,6 +85,10 @@ DATABASES = {
         "PASSWORD": "UnaClav3",
         "HOST": "127.0.0.1",
         "PORT": "5432",
+        # "OPTIONS": {
+        #     "service": ".pg_service.conf",
+        #     "passfile": ".my_pgpass"
+        # }
     }
 }
 

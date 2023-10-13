@@ -3,7 +3,7 @@ from utilizacion_buses_cargadores_app.api import EstadoBusViewSet
 
 router = routers.DefaultRouter() # permite no definir urlpatterns
 
-router.register('api/estados_buses', EstadoBusViewSet, 'estados_buses') # Crea un get, post, delete, put
+router.register(r'api/estados_bus', EstadoBusViewSet, 'estados_bus') # Crea un get, post, delete, put
 
 
 # Importando las urls
