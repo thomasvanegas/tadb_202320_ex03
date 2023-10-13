@@ -14,12 +14,12 @@ class IHistorialUtilizacionBusHoraRepository:
     def GetByhora_idAsync(self, hora_id: int) -> HistorialUtilizacionBusHora:
         pass
     
-    def CreateAsync(self, unaHistorialUtilizacionBusHora: HistorialUtilizacionBusHora) -> bool:
+    def CreateAsync(self, unHistorialUtilizacionBusHora: HistorialUtilizacionBusHora) -> bool:
         pass
 
-    def UpdateAsync(self, unaHistorialUtilizacionBusHora: HistorialUtilizacionBusHora) -> bool:
+    def UpdateAsync(self, unHistorialUtilizacionBusHora: HistorialUtilizacionBusHora) -> bool:
         pass
 
-    def DeleteAsync(self, unaHistorialUtilizacionBusHora: HistorialUtilizacionBusHora) -> bool:
+    def DeleteAsync(self, unHistorialUtilizacionBusHora: HistorialUtilizacionBusHora) -> bool:
         pass
       print('Interface de HistorialUtilizacionBusHora Repository')
