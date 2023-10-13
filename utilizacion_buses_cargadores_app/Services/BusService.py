@@ -1,4 +1,4 @@
-from .models import Bus
+from utilizacion_buses_cargadores_app.Models.Bus import Bus
 from django.core.exceptions import ObjectDoesNotExist, ValidationError
 
 class BusService:
