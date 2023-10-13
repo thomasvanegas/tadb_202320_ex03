@@ -8,3 +8,4 @@ class EstadoBus(models.Model):
 
     class Meta:
         app_label = 'utilizacion_buses_cargadores_app'
+        db_table = 'estados_buses'

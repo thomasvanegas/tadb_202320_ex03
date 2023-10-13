@@ -6,7 +6,6 @@ from utilizacion_buses_cargadores_app.Models.EstadoCargador import EstadoCargado
 from utilizacion_buses_cargadores_app.Models.Hora import Hora
 from utilizacion_buses_cargadores_app.Models.HistorialUtilizacionBusHora import HistorialUtilizacionBusHora
 from utilizacion_buses_cargadores_app.Models.HistorialUtilizacionCargadorHora import HistorialUtilizacionCargadorHora
-from utilizacion_buses_cargadores_app.Models.UtilizacionCargadorBus import UtilizacionCargadorBus
 
 # Register your models here -> Para que sean visible a través del panel de administracion
 admin.site.register(Bus)
@@ -16,4 +15,3 @@ admin.site.register(EstadoCargador)
 admin.site.register(Hora)
 admin.site.register(HistorialUtilizacionBusHora)
 admin.site.register(HistorialUtilizacionCargadorHora)
-admin.site.register(UtilizacionCargadorBus)

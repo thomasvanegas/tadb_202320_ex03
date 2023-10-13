@@ -80,15 +80,11 @@ WSGI_APPLICATION = 'utilizacion_buses_cargadores.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "gestion_utilizacion_buses_cargadores_tadb",
-        "USER": "thomasdba",
+        "NAME": "db_gestion_utilizacion_buses_cargadores",
+        "USER": "dba_gestion_movilidad_medellin",
         "PASSWORD": "UnaClav3",
         "HOST": "127.0.0.1",
         "PORT": "5432",
-        # "OPTIONS": {
-        #     "service": ".pg_service.conf",
-        #     "passfile": ".my_pgpass"
-        # }
     }
 }
 

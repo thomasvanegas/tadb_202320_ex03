@@ -8,7 +8,6 @@ from utilizacion_buses_cargadores_app.Models.Cargador import Cargador
 from utilizacion_buses_cargadores_app.Models.Hora import Hora
 from utilizacion_buses_cargadores_app.Models.HistorialUtilizacionBusHora import HistorialUtilizacionBusHora
 from utilizacion_buses_cargadores_app.Models.HistorialUtilizacionCargadorHora import HistorialUtilizacionCargadorHora
-from utilizacion_buses_cargadores_app.Models.UtilizacionCargadorBus import UtilizacionCargadorBus
 
 class EstadoBusSerializer(serializers.ModelSerializer):
     class Meta:

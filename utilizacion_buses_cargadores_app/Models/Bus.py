@@ -10,3 +10,4 @@ class Bus(models.Model):
 
     class Meta:
         app_label = 'utilizacion_buses_cargadores_app'
+        db_table = 'buses'

@@ -39,7 +39,7 @@ GRANT INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO dba_gestion_movil
 DROP TABLE IF EXISTS estados_buses;
 
 CREATE TABLE estados_buses (
-    id INT SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     descripcion VARCHAR(20) NOT NULL UNIQUE
 );
 
@@ -51,7 +51,7 @@ CREATE INDEX ix_descripcion_est_buses ON estados_buses(descripcion);
 DROP TABLE IF EXISTS buses;
 
 CREATE TABLE buses (
-    id INT SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     placa VARCHAR(6) NOT NULL UNIQUE,
     estado_id INT,
 
@@ -71,7 +71,7 @@ CHECK (placa ~ '^[A-Z]{3}[0-9]{3}$');
 DROP TABLE IF EXISTS estados_cargadores;
 
 CREATE TABLE estados_cargadores (
-    id INT SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     descripcion VARCHAR(20) NOT NULL UNIQUE
 );
 
@@ -84,7 +84,7 @@ CREATE INDEX ix_descripcion_est_cargadores ON estados_cargadores(descripcion);
 DROP TABLE IF EXISTS cargadores;
 
 CREATE TABLE cargadores (
-    id INT SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     estado_id INT,
 
     CONSTRAINT fk_cargadores_estados_cargadores FOREIGN KEY (estado_id) REFERENCES estados_cargadores(id)
@@ -97,7 +97,7 @@ CREATE TABLE cargadores (
 DROP TABLE IF EXISTS horas;
 
 CREATE TABLE horas (
-    id  INT SERIAL PRIMARY KEY,
+    id  SERIAL PRIMARY KEY,
     descripcion VARCHAR(4) UNIQUE NOT NULL,
     hora_pico BOOLEAN NOT NULL
 );
@@ -114,7 +114,7 @@ COMMENT ON COLUMN horas.descripcion IS 'Indica la hora, se usaran, AM Y PM, por 
 DROP TABLE IF EXISTS historial_utilizacion_cargadores_hora;
 
 CREATE TABLE historial_utilizacion_cargadores_hora (
-    id INT SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     cargador_id INT NOT NULL,
     hora_id INT NOT NULL,
     bus_id INT DEFAULT NULL,
@@ -131,7 +131,7 @@ CREATE TABLE historial_utilizacion_cargadores_hora (
 DROP TABLE IF EXISTS historial_utilizacion_buses_hora;
 
 CREATE TABLE historial_utilizacion_buses_hora (
-    id INT SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     bus_id INT NOT NULL,
     hora_id INT NOT NULL,
 
