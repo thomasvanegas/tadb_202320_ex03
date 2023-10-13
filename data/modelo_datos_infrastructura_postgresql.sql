@@ -143,3 +143,18 @@ CREATE TABLE historial_utilizacion_buses_hora (
 
 
 -- CREACION DE STORED PROCEDURES PARA EL USO POSTERIOR EN EL CRUD DEL REPOSITORY PATTERN
+-- Procedimiento almacenado para crear registro del bus 
+CREATE OR REPLACE FUNCTION crear_bus(id str, placa str, estadoo_id int)
+RETURNS void AS $$
+BEGIN
+    INSERT INTO Bus(id, placa, estadoo_id) VALUES (id, placa, estadoo_id);
+END;
+$$ LANGUAGE plpgsql;
+
+-- Procedimiento almacenado para eliminar  registro del bus 
+CREATE OR REPLACE FUNCTION eliminar_bus(id str, placa str, estadoo_id int)
+RETURNS void AS $$
+BEGIN
+    DELETE FROM Bus WHERE id = estado_id;
+END;
+$$ LANGUAGE plpgsql;
